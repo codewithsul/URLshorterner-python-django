@@ -1,0 +1,83 @@
+{% extends 'layout.html' %}
+
+
+
+{% block body %}
+<body>
+    <div class="top_container">
+        <div class="horizontal_nav">
+            <ul class="nav_items">
+                <li>
+                    <i class='bx bx-link'></i>
+                </li>
+                <li>
+                    <a href="#HOME">
+                        <span><strong><i>G</i>O</strong>short</span>
+                    </a>
+                </li>
+                <li>
+            </ul>
+        </div>
+        <form id="post-form" >
+                {% csrf_token %}
+                <div class="input_box">
+                    <p><i>G</i><p2>O</p2></p>
+                    <input type="text" id="link" name="link" placeholder="paste the url here..">
+                </div>
+                <div class="button">
+                    <button type="submit" id='submit'>shorten</button>
+                </div>
+        </form>
+        <div class="middle_block">
+            <div class="p6">
+               <p6></p6>
+            </div>
+        </div>
+     <div class="all">
+        <div class="article">
+            <article>
+                    <p3><i class='bx bx-message-detail' ></i></p3>
+                </article>
+            </div>
+            <div class="article2">
+                <article>
+                    <p4>We focus on simpicity of everything,links look more stylish when everything is short. </p4>
+                </article>
+            </div>
+            <div class="article3">
+                <article>
+                    <i class='bx bxs-heart' ></i>
+                </article>
+            </div>
+            <div class="article4">
+                <article>
+                    <p5>Thanks for visiting our page,Remember sharing the page, Welcome. </p5>
+                </article>
+            </div>
+        </div>
+     </div>
+     <footer>
+        &#169; 2022
+     </footer>
+     <script type="text/javascript">
+
+        $(document).on('submit','#post-form',function(e){
+            e.preventDefault();
+
+
+            $.ajax({
+                type:'POST',
+                url:'/create',
+                data:{
+                    link: $('#link').val(),
+                    csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
+                },
+
+                success: function(data){
+                    $('p6').html("localhost:8000/"+data)
+                }
+            });
+        });
+     </script>
+    </body>
+{% endblock %}
