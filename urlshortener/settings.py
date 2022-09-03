@@ -58,7 +58,7 @@ ROOT_URLCONF = 'urlshortener.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS':os.path.join(BASE_DIR, 'templates'),
+        'DIRS':os.path.join(BASE_DIR, 'C:\Users\ARTOFSULEIMAN\Desktop\myapp\shortener\template'),
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
