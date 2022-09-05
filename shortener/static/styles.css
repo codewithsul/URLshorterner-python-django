@@ -47,7 +47,7 @@
     display:block ;
     text-align:center ;
 }    
-input[type=text]{
+#link{
     border-radius:22px;
     font:10px;
     border:1px solid #0492C2 ;
@@ -171,14 +171,110 @@ input[type=text]{
     font-size:14px;
     text-align:center ;
 }
-footer{
-    background-color:#141414;
-    margin-top:0px;
-    color:#FFF;
-    text-align:center ;
-    height: 80px;
-}
 .all{
     margin-top:70px;
     
+}
+#user_name{
+    margin-top: 15px;
+    border-radius: 8px;
+    font:10px;
+    border:1px solid #0492C2 ;
+    background-color:#022D36;
+    color:#FFF;
+    text-align:center;
+    padding: 8px;
+    width: 150px;
+}
+#second_name{
+    border-radius: 8px;
+    font:10px;
+    border:1px solid #0492C2 ;
+    background-color:#022D36;
+    color:#FFF;
+    text-align:center;
+    padding: 8px;
+    width: 150px;
+}
+#email_address{
+    border-radius: 8px;
+    font:10px;
+    border:1px solid #0492C2 ;
+    background-color:#022D36;
+    color:#FFF;
+    text-align:center;
+    padding: 8px;
+    width: 190px;
+}
+.second_name{
+    display: block;
+    text-align: center;
+    background-color: #141414;
+    height: 65px;
+}
+.first_name{
+    display: block;
+    text-align: center;
+    background-color: #141414;
+}
+.email{
+    display: block;
+    text-align: center;
+    background-color: #141414;
+    height: 65px;
+}
+.textarea{
+    display: block;
+    text-align: center;
+    background-color: #141414;
+    height: 210px;
+    
+}
+.textarea textarea{
+    width: 280px;
+    height: 80px;
+}
+.futa{
+    display: block;
+    background-color:#141414;
+    color:#FFF;
+    text-align:center ;
+    height: 30px;
+}
+h5{
+    text-align: center;
+    font-family: Arial;
+    font-size: 25px;
+    margin: 0;
+    background-color: lightgrey;
+}
+h3{
+    text-align: center;
+    font-family: Arial;
+    font-size: 17px;
+    margin: 0;
+    background-color:#141414; 
+    color: #FFF;
+}
+.btn_msg{
+    margin-top: 10px;
+}
+#message_submit{
+    padding: 8px;
+    border:1px;
+    border-radius:3px;
+    background-color:#63C5DA;
+    color:#FFF;
+    transition:all ease;
+    font-size:18px;
+    font-family:arial;
+    width: 100px;
+}
+#message_submit:hover{
+    cursor:pointer ;
+    opacity:85%;
+}
+#message_submi:active{
+    opacity:40%;
+    transition:opacity 0.15s;
 }

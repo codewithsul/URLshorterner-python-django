@@ -8,9 +8,6 @@
         <div class="horizontal_nav">
             <ul class="nav_items">
                 <li>
-                    <i class='bx bx-link'></i>
-                </li>
-                <li>
                     <a href="#HOME">
                         <span><strong><i>G</i>O</strong>short</span>
                     </a>
@@ -56,9 +53,39 @@
             </div>
         </div>
      </div>
-     <footer>
-        &#169; 2022
-     </footer>
+     <div class="developer_info">
+        <form id="contanct_developer" method="POST">
+            {% csrf_token%}
+            <h5>contact developer</h5>
+            <div class="first_name">
+                <input id="user_name" type="text" name="user_name" placeholder="first name">
+            </div>
+            <div class="second_name">
+                <input type="text" name="second_name" placeholder="second name" id="user_name">
+            </div> 
+            <div class="email">
+                <input type="email" name="email" placeholder="email address" id="email_address">
+            </div>
+            <div class="textarea">
+                <h3>
+                    message
+                </h3>
+                <textarea>
+                </textarea>
+                <div class="btn_msg">
+                    <button id="message_submit" type="submit">Send</button>
+                </div>
+            </div>
+            
+        </form>
+        <div class="futa">
+            <div class="futa_margin">
+            <footer>
+                    copyright &#169; 2022 | created. codewithsul
+            </footer>
+            </div>
+        </div>
+     </div>    
      <script type="text/javascript">
 
         $(document).on('submit','#post-form',function(e){
