@@ -13,6 +13,12 @@
                     </a>
                 </li>
                 <li>
+                    <select>
+                        <option> TECH </option>
+                        <option> TRENDS </option>
+                        <option> NEWS </option>
+                    </select>
+                </li>
             </ul>
         </div>
         <form id="post-form" >
@@ -53,30 +59,30 @@
             </div>
         </div>
      </div>
+     <h5>Contact Us</h5>
      <div class="developer_info">
         <form id="contanct_developer" method="POST">
             {% csrf_token%}
-            <h5>contact developer</h5>
             <div class="first_name">
-                <input id="user_name" type="text" name="user_name" placeholder="first name">
+                <span>First Name</span><br>
+                <input id="user_name" type="text" name="user_name" placeholder="Your name..">
             </div>
             <div class="second_name">
-                <input type="text" name="second_name" placeholder="second name" id="user_name">
+                <span>Second Name</span><br>
+                <input type="text" name="second_name" placeholder="Your last name.." id="last_name">
             </div> 
             <div class="email">
+                <span> Email Address</span><br>
                 <input type="email" name="email" placeholder="email address" id="email_address">
             </div>
             <div class="textarea">
-                <h3>
-                    message
-                </h3>
-                <textarea>
+                <textarea id="subject" placeholder="write something...">
+
                 </textarea>
                 <div class="btn_msg">
                     <button id="message_submit" type="submit">Send</button>
                 </div>
-            </div>
-            
+            </div>   
         </form>
         <div class="futa">
             <div class="futa_margin">
@@ -85,7 +91,12 @@
             </footer>
             </div>
         </div>
-     </div>    
+     </div> 
+     <script>
+        document.querySelector('#post-form').onsubmit = function() {
+            alert('Have a nice time :)');
+        }
+     </script>   
      <script type="text/javascript">
 
         $(document).on('submit','#post-form',function(e){

@@ -42,6 +42,19 @@
     font-size:24px;
     vertical-align: 50px;
 }
+.nav_items li select{
+    color:#FFF;
+    background-color: #63C5DA;
+    padding: 4px 5px;
+    border: none;
+    border-radius: 2px;
+    margin-top: 12px;
+}
+.nav_items li select:hover{
+    background-color: #FFF;
+    color: #141414;
+    transition: all 0.15s;
+}
 .input_box{
     margin-top:55px;
     display:block ;
@@ -175,36 +188,45 @@
     margin-top:70px;
     
 }
+.developer_info{
+    height: 400px;
+    top: 0;
+}
 #user_name{
-    margin-top: 15px;
-    border-radius: 8px;
+    border-radius: 4px;
     font:10px;
     border:1px solid #022D36 ;
-    background-color:#022D36;
+    background-color:#141414;
     color:#FFF;
-    text-align:center;
+    text-align:left;
     padding: 8px;
     width: 150px;
 }
-#second_name{
-    border-radius: 8px;
+#last_name{
+    border-radius: 4px;
     font:10px;
     border:1px solid #022D36 ;
-    background-color:#022D36;
+    background-color:#141414;
     color:#FFF;
-    text-align:center;
+    text-align:left;
     padding: 8px;
     width: 150px;
 }
 #email_address{
-    border-radius: 8px;
+    border-radius: 4px;
     font:10px;
     border:1px solid #022D36;
-    background-color:#022D36;
+    background-color:#141414;
     color:#FFF;
-    text-align:center;
+    text-align:left;
     padding: 8px;
     width: 190px;
+}
+.first_name{
+    display: block;
+    text-align: center;
+    background-color: #141414;
+    height: 65px;
 }
 .second_name{
     display: block;
@@ -212,11 +234,7 @@
     background-color: #141414;
     height: 65px;
 }
-.first_name{
-    display: block;
-    text-align: center;
-    background-color: #141414;
-}
+
 .email{
     display: block;
     text-align: center;
@@ -230,9 +248,12 @@
     height: 210px;
     
 }
-.textarea textarea{
-    width: 280px;
-    height: 80px;
+.textarea #subject{
+    width: 200px;
+    height: 100px;
+    color: #FFF;
+    background-color: #141414;
+    border: 1px solid #022D36;
 }
 .futa{
     display: block;
@@ -244,23 +265,18 @@
 h5{
     text-align: center;
     font-family: Arial;
-    font-size: 25px;
+    font-size: 24px;
     margin: 0;
-    background-color: lightgrey;
-}
-h3{
-    text-align: center;
-    font-family: Arial;
-    font-size: 17px;
-    margin: 0;
-    background-color:#141414; 
+    background-color: #141414;
+    font-weight: 700;
+    height: 40px;
     color: #FFF;
 }
 .btn_msg{
     margin-top: 10px;
 }
 #message_submit{
-    padding: 8px;
+    padding: 6px;
     border:1px;
     border-radius:3px;
     background-color:#63C5DA;
@@ -274,7 +290,10 @@ h3{
     cursor:pointer ;
     opacity:85%;
 }
-#message_submi:active{
+#message_submit:active{
     opacity:40%;
     transition:opacity 0.15s;
+}
+span{
+    color: #FFF;
 }
