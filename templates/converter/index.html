@@ -59,10 +59,9 @@
             </div>
         </div>
      </div>
-     <h5>Contact Us</h5>
      <div class="developer_info">
-        <form id="contanct_developer" method="POST">
-            {% csrf_token%}
+        <h5>Contact Us</h5>
+        <form id="contanct_developer">
             <div class="first_name">
                 <span>First Name</span><br>
                 <input id="user_name" type="text" name="user_name" placeholder="Your name..">
@@ -76,9 +75,8 @@
                 <input type="email" name="email" placeholder="email address" id="email_address">
             </div>
             <div class="textarea">
-                <textarea id="subject" placeholder="write something...">
-
-                </textarea>
+                <textarea  id="subject"  rows="5" placeholder="write something here.."></textarea>
+                
                 <div class="btn_msg">
                     <button id="message_submit" type="submit">Send</button>
                 </div>
@@ -117,5 +115,20 @@
             });
         });
      </script>
+     <script>
+        document.querySelector('#contanct_developer').onsubmit = function () {
+            Email.send({
+            Host : "smtp.gmail.com",
+            Username : "suleiman4a@gmail.com",
+            Password : "iloveaziza",
+            To : 'suleiman4a@gmail.com',
+            From : document.getElementById('email_address').value,
+            Subject : "Form enquiry",
+            Body : "And this is the body"
+        }).then(
+        message => alert(message)
+        );
+        }
+     </script>
     </body>
-{% endblock %}
+{% endblock %} 

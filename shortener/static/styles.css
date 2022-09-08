@@ -5,7 +5,7 @@
 
 .top_container{
    width:100%;
-   height:850px;
+   height:1350px;
    background-color:#141414;
    top:0;
    border:1px ;
@@ -186,41 +186,45 @@
 }
 .all{
     margin-top:70px;
+
     
 }
 .developer_info{
     height: 400px;
-    top: 0;
+    top: 0px;
 }
 #user_name{
     border-radius: 4px;
     font:10px;
     border:1px solid #022D36 ;
-    background-color:#141414;
+    background-color:#022D36 ;
     color:#FFF;
     text-align:left;
     padding: 8px;
-    width: 150px;
+    width: 190px;
+    outline: none;
 }
 #last_name{
     border-radius: 4px;
     font:10px;
     border:1px solid #022D36 ;
-    background-color:#141414;
+    background-color:#022D36;
     color:#FFF;
     text-align:left;
     padding: 8px;
-    width: 150px;
+    width: 190px;
+    outline: none;
 }
 #email_address{
     border-radius: 4px;
     font:10px;
     border:1px solid #022D36;
-    background-color:#141414;
+    background-color:#022D36;
     color:#FFF;
     text-align:left;
     padding: 8px;
     width: 190px;
+    outline: non;
 }
 .first_name{
     display: block;
@@ -252,8 +256,9 @@
     width: 200px;
     height: 100px;
     color: #FFF;
-    background-color: #141414;
+    background-color: #022D36;
     border: 1px solid #022D36;
+    outline: none;
 }
 .futa{
     display: block;
@@ -271,6 +276,7 @@ h5{
     font-weight: 700;
     height: 40px;
     color: #FFF;
+    margin-bottom: 0.5px;
 }
 .btn_msg{
     margin-top: 10px;
