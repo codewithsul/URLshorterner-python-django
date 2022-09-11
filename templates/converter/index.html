@@ -12,15 +12,20 @@
                         <span><strong><i>G</i>O</strong>short</span>
                     </a>
                 </li>
-                <li>
-                    <select>
-                        <option> TECH </option>
-                        <option> TRENDS </option>
-                        <option> NEWS </option>
-                    </select>
-                </li>
+                <div class="nav_right">
+                    <li>            
+                        <form>
+                        <select name="list" id="list" >
+                            <option   onclick="goToNewPage()" accesskey="target" value="https://techcrunch.com/"> TECH </option>
+                            <option   onclick="Secondpage()" accesskey="target" value="https://www.huffpost.com/"> TRENDS </option>
+                            <option   onclick="finalpage()" accesskey="target" value="https://www.bbc.com/"> NEWS </option>
+                        </select>
+                        </form>
+                    </li>
+                </div>
             </ul>
         </div>
+        
         <form id="post-form" >
                 {% csrf_token %}
                 <div class="input_box">
@@ -60,9 +65,11 @@
         </div>
      </div>
      <div class="developer_info">
-        <h5>Contact Us</h5>
-        <form id="contanct_developer">
+        <h5>Contact Us
+        </h5>
+        <form id="contanct_developer" onsubmit="sendEmail(); reset(); return false;">
             <div class="first_name">
+                <p><hr class="solid"></p>
                 <span>First Name</span><br>
                 <input id="user_name" type="text" name="user_name" placeholder="Your name..">
             </div>
@@ -90,6 +97,34 @@
             </div>
         </div>
      </div> 
+     <script type="text/javascript">
+        function goToNewPage()
+        {
+            var url = document.getElementById('list').value;
+            if(url != 'none') {
+                window.location = url;
+            }
+           
+        }
+
+        function Secondpage()
+        {
+            var url2 = document.getElementById('list').value;
+            if(url2 != 'none') {
+                window.location = url2;
+            }
+           
+        }
+
+        function finalpage()
+        {
+            var url3 = document.getElementById('list').value;
+            if(url3 != 'none') {
+                window.location = url3;
+            }
+           
+        }
+    </script>    
      <script>
         document.querySelector('#post-form').onsubmit = function() {
             alert('Have a nice time :)');
@@ -116,19 +151,20 @@
         });
      </script>
      <script>
-        document.querySelector('#contanct_developer').onsubmit = function () {
+        function sendEmail(){
             Email.send({
-            Host : "smtp.gmail.com",
-            Username : "suleiman4a@gmail.com",
-            Password : "iloveaziza",
-            To : 'suleiman4a@gmail.com',
-            From : document.getElementById('email_address').value,
-            Subject : "Form enquiry",
-            Body : "And this is the body"
-        }).then(
-        message => alert(message)
-        );
-        }
+                Host : "smtp.elastic.com",
+                Username : "suleiman4a@gmail.com",
+                Password : "D4215C064030543068B19C50377C50EAA07C5",
+                To : 'suleiman4a@gmail.com',
+                From : document.getElementById('email_address').value,
+                Subject : "This is the subject",
+                Body : "text: " + document.getElementById('subject').value + 
+                "name: "+ document.getElementById('user_name').value + "last name: " +document.getElementById('last_name').value,
+            }).then(
+            message => alert("message sent succesful")
+            );
+        }   
      </script>
     </body>
 {% endblock %} 
